@@ -4,7 +4,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>GAME WORLD | โลกแห่งเกม</title>
+<title>GAME WORLD</title>
 
 <style>
 * {
@@ -79,9 +79,9 @@ header p {
 
 .card img {
     width: 100%;
-    height: 230px;
+    height: 220px;
     object-fit: cover;
-    background: #252b40;
+    display: block;
 }
 
 .card-content {
@@ -141,53 +141,30 @@ footer {
 <body>
 
 <header>
-    <h1> GAME WORLD</h1>
+    <h1>🎮 GAME WORLD</h1>
     <p>โลกแห่งเกม รวมเกมยอดนิยมที่คุณไม่ควรพลาด!</p>
 </header>
 
 <section class="filter-container">
-    <button class="filter-btn active" onclick="filterGames('all',this)">ทั้งหมด</button>
-    <button class="filter-btn" onclick="filterGames('action',this)">Action</button>
-    <button class="filter-btn" onclick="filterGames('adventure',this)">Adventure</button>
-    <button class="filter-btn" onclick="filterGames('rpg',this)">RPG</button>
+    <button class="filter-btn active"
+    onclick="filterGames('all',this)">ทั้งหมด</button>
+
+    <button class="filter-btn"
+    onclick="filterGames('action',this)">Action</button>
+
+    <button class="filter-btn"
+    onclick="filterGames('adventure',this)">Adventure</button>
+
+    <button class="filter-btn"
+    onclick="filterGames('rpg',this)">RPG</button>
 </section>
 
 <section class="gallery">
 
+    <!-- PUBG -->
     <div class="card" data-category="action">
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1274570/header.jpg"
-             alt="Valorant"
-             onerror="this.src='https://images.igdb.com/igdb/image/upload/t_cover_big/co2mvt.jpg'">
-        <div class="card-content">
-            <h3>Valorant</h3>
-            <p>เกมยิงปืน Tactical FPS ที่ต้องใช้ทักษะและการทำงานเป็นทีม</p>
-            <span class="category">Action</span>
-        </div>
-    </div>
-
-    <div class="card" data-category="adventure">
-        <img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1672970/header.jpg"
-             alt="Minecraft">
-        <div class="card-content">
-            <h3>Minecraft</h3>
-            <p>เกมสร้างโลกอิสระที่สามารถสร้างสิ่งต่าง ๆ ได้ตามจินตนาการ</p>
-            <span class="category">Adventure</span>
-        </div>
-    </div>
-
-    <div class="card" data-category="rpg">
-        <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co57wy.jpg"
-             alt="Genshin Impact">
-        <div class="card-content">
-            <h3>Genshin Impact</h3>
-            <p>เกม RPG ผจญภัยในโลกแฟนตาซี พร้อมตัวละครและพลังธาตุ</p>
-            <span class="category">RPG</span>
-        </div>
-    </div>
-
-    <div class="card" data-category="action">
-        <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1wyy.jpg"
-             alt="PUBG">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/578080/header.jpg"
+        alt="PUBG">
         <div class="card-content">
             <h3>PUBG</h3>
             <p>เกม Battle Royale ต่อสู้เพื่อเอาชีวิตรอดและเป็นผู้เล่นคนสุดท้าย</p>
@@ -195,22 +172,57 @@ footer {
         </div>
     </div>
 
-    <div class="card" data-category="adventure">
-        <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co1rgi.jpg"
-             alt="The Legend of Zelda">
+    <!-- Apex Legends -->
+    <div class="card" data-category="action">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1172470/header.jpg"
+        alt="Apex Legends">
         <div class="card-content">
-            <h3>The Legend of Zelda</h3>
-            <p>เกมผจญภัยในโลกกว้าง ค้นหาความลับและทำภารกิจต่าง ๆ</p>
+            <h3>Apex Legends</h3>
+            <p>เกมยิงแนว Battle Royale ที่มีตัวละครและความสามารถเฉพาะตัว</p>
+            <span class="category">Action</span>
+        </div>
+    </div>
+
+    <!-- Cyberpunk 2077 -->
+    <div class="card" data-category="adventure">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1091500/header.jpg"
+        alt="Cyberpunk 2077">
+        <div class="card-content">
+            <h3>Cyberpunk 2077</h3>
+            <p>ผจญภัยในเมือง Night City โลกอนาคตที่เต็มไปด้วยเทคโนโลยี</p>
             <span class="category">Adventure</span>
         </div>
     </div>
 
+    <!-- Stardew Valley -->
+    <div class="card" data-category="adventure">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/413150/header.jpg"
+        alt="Stardew Valley">
+        <div class="card-content">
+            <h3>Stardew Valley</h3>
+            <p>เกมจำลองชีวิตในชนบท ทำฟาร์ม ปลูกผัก และสร้างมิตรภาพ</p>
+            <span class="category">Adventure</span>
+        </div>
+    </div>
+
+    <!-- Elden Ring -->
     <div class="card" data-category="rpg">
-        <img src="https://images.igdb.com/igdb/image/upload/t_cover_big/co5s5u.jpg"
-             alt="Final Fantasy">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1245620/header.jpg"
+        alt="Elden Ring">
+        <div class="card-content">
+            <h3>Elden Ring</h3>
+            <p>เกม RPG ผจญภัยในโลกแฟนตาซี ต่อสู้กับศัตรูและบอสสุดท้าทาย</p>
+            <span class="category">RPG</span>
+        </div>
+    </div>
+
+    <!-- Final Fantasy XVI -->
+    <div class="card" data-category="rpg">
+        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/2515020/header.jpg"
+        alt="Final Fantasy XVI">
         <div class="card-content">
             <h3>Final Fantasy XVI</h3>
-            <p>เกม RPG แฟนตาซีที่เต็มไปด้วยการต่อสู้และเนื้อเรื่องเข้มข้น</p>
+            <p>เกม RPG แฟนตาซีที่เต็มไปด้วยเวทมนตร์ การต่อสู้ และเนื้อเรื่องเข้มข้น</p>
             <span class="category">RPG</span>
         </div>
     </div>
